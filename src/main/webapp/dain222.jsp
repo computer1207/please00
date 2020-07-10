@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-정아 
-테스트 중입니다.
+다인두번째임~
 </body>
 </html>
