@@ -13,7 +13,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- 왼쪽 메뉴바 -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.jsp">
         <div>
           <!-- 보물섬 아이콘 -->
           <i><img src="text.png" width="70" height="70"></i>
@@ -272,7 +272,7 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="#">공지사항</a>
+            <a class="collapse-item" href="tables.jsp">공지사항</a>
             <a class="collapse-item" href="#">정책/등록 가이드</a>
             <a class="collapse-item" href="#">자주 묻는 질문</a>
           </div>
