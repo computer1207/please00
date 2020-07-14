@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,9 +57,9 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Components:</h6>-->
-            <a class="collapse-item" href="#">현황</a>
-            <a class="collapse-item" href="#">주문 리스트</a>
-            <a class="collapse-item" href="#">발송 정보 일괄 등록</a>
+            <a class="collapse-item" href="orderCondition.jsp">현황</a>
+            <a class="collapse-item" href="orderList.jsp">주문 리스트</a>
+            <a class="collapse-item" href="registerOfShip.jsp">발송 정보 일괄 등록</a>
           </div>
         </div>
       </li>
