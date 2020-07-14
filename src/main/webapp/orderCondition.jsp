@@ -50,7 +50,7 @@
 							</td>
 							<td>
 								<div style="text-align:left">
-									<input type="checkbox" checked="checked"/>[입점할인] 스터드키링_TEST
+									<a href="#" style="color:black; text-style:bold;"><input type="checkbox" checked="checked"/>[입점할인] 스터드키링_TEST</a>
 									<br>0개남음<br>
 									<label style="text-align:center; background-color:#5EC75E; width:auto; margin-bottom:0rem; color:white">
 									<i class="fas fa-tags"></i>10%</label>
