@@ -23,8 +23,8 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
   <style>
-    .container { padding-left: 20rem; }
-    .container { padding-right: 20rem; }
+    .container { padding-left: 20%; }
+    .container { padding-right: 20%; }
     .col-lg-7 {
    flex: 1 1 58.33333%;
    max-width: 100%
