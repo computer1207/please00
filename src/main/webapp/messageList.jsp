@@ -75,21 +75,21 @@
 			
 
 
-				<div style="width: 100%; padding: 1%;">
-					대화상대 검색&nbsp;&nbsp;<input type="text"><input type="submit" value="검색">
-					<hr>
-					<div style="width:100%; height: 60%; background-color: white;
-					border: 1px black solid">
-					
+					<div style="width: 70%; padding: 1%;">
+						대화상대 검색&nbsp;&nbsp;<input type="text"><input type="submit" value="검색">
+						<hr>
+						<div style="width:100%; height: 60%; background-color: white;
+						border: 1px black solid">
+						
+						</div>
+						<hr>
+						<div style="display: flex; flex-direction: row;">
+						<textarea rows="7%" cols="120%"></textarea>
+						<input style="width: 10%;" type="submit" value="입력">
+						</div>
 					</div>
-					<hr>
-					<div style="display: flex; flex-direction: row;">
-					<textarea rows="7%" cols="120%"></textarea>
-					<input style="width: 10%;" type="submit" value="입력">
-					</div>
-				</div>
 			
-			</div>
+				</div>
 
 
 
