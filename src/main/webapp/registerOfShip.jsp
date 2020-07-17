@@ -418,7 +418,7 @@
 		    	var tTd = document.createElement("td");
 		    	var num = document.createElement("input");
 		    	num.type = "text";
-		    	num.innerHTML = efile.운송장;
+		    	num.value = efile.운송장;
 		    	tTd.appendChild(num);
 		    	tTr.appendChild(tTd);
 		    	

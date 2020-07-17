@@ -434,7 +434,7 @@
 										</select>
 									</td>
 									<td>
-										<input id="number" type="text" size="18"/>
+										<input id="number" type="text" size="18" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"/>
 									</td>
 								</tr>
 							</table>
@@ -478,7 +478,7 @@
 	<script src="js/demo/chart-area-demo.js"></script>
 	<script src="js/demo/chart-pie-demo.js"></script>
 
-	<script>
+	<script>		
 		document.getElementById('beforeDate').value = new Date().toISOString()
 				.substring(0, 10);
 		document.getElementById('afterDate').value = new Date().toISOString()
