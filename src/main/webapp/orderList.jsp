@@ -14,7 +14,13 @@
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
 <style type="text/css">
 
-#aboutSend tr th{
+#aboutSend tr th table {
+	background-color: white;
+}
+
+
+
+#aboutSend tr th#asdfasdf{
 	padding:0.3%;
 	text-align:center;
 	border: 1px solid black;
@@ -99,7 +105,7 @@
 				<div style="margin-left: 2%; margin-right: 2%;">
 					<h2 style="text-style: bold; margin-bottom: 0rem;">주문</h2>
 					<hr
-						style="margin-top: 0rem; border: 0; background: #ccc; height: 0.3rem;">
+						style="margin-top: 0rem; border: 0; background: #ccc; height: 0.2rem;">
 
 					<div>
 						<select style="font-size: 1rem; width: 8%; height: 1.8rem">
@@ -140,24 +146,14 @@
 							</th>
 							<th id="thCss">배송 완료<br>0
 							</th>
-							<th id="thCss">취소 요청<br>0
-							</th>
-							<th id="thCss">취소 완료<br>0
-							</th>
-							<th id="thCss">취소 거부<br>0
-							</th>
+							
 							<th id="thCss">환불 요청<br>0
 							</th>
 							<th id="thCss">환불 완료<br>0
 							</th>
 							<th id="thCss">환불 거부<br>0
 							</th>
-							<th id="thCss">교환 요청<br>0
-							</th>
-							<th id="thCss">교환 완료<br>0
-							</th>
-							<th id="thCss">교환 거부<br>0
-							</th>
+							
 						</tr>
 					</table>
 
@@ -187,7 +183,7 @@
 									<i class="fas fa-comments"></i>&nbsp;메세지 보내기
 								</a>
 							</div>
-							<table style="margin-top: 5%">
+							<table style="margin-top: 3%">
 								<tr>
 									<td style="width:40%; color:black; font-weight:bold">받는 분</td>
 									<td>김</td>
@@ -202,7 +198,7 @@
 								</tr>
 							</table>
 							
-							<br><br>
+							<br>
 							
 							<h5>결제 정보</h5>
 							<table style="border:0.5px solid gray;border-collapse:collapse; text-align:center;color:black; width:80%; height:8rem">
@@ -231,7 +227,7 @@
 								</tr>
 							</table>
 							
-							<div style="margin-top:5%">
+							<div style="margin-top:3%">
 								<button id="aboutSendButton" style="text-decoration:none; background-color: white;border: 1px solid gray; color: #28E7FF; padding: 1%; font-weight: bold">
 									배송정보 입력
 								</button>
@@ -300,9 +296,9 @@
 							</h5>
 							</div>
 							<div
-								style="margin-bottom: 1rem; padding: 1rem; width: 100%; background-color: #dcdcdc">
+								style="margin-bottom: 1rem; padding: 1rem; width: 100%; background-color: #dcdcdc; overflow-x:auto">
 								<div style="display: inline-block">
-									<a>-</a>
+									<a id="orderMemo" style="word-break:keep-all;white-space:pre;">-</a>
 								</div>
 								<div style="text-align: left; align: left; float: right">
 									<a></a>
@@ -315,13 +311,8 @@
 									value="수정">
 							</h5>
 							<div
-								style="margin-bottom: 1rem; padding: 1rem; width: 100%; background-color: #dcdcdc">
-								<div style="display: inline-block">
-									<a> idus VIP고객(배송비 무료)<br> 고객님_생일 11월 20일<br> <input
-										type="checkbox" checked="checked" /> 2019.01.24, 대량구매 문의만
-										주심(각인포함)<br> 2018.12.25, 크리스마스선물 문의주심
-									</a>
-								</div>
+								style="margin-bottom: 1rem; padding: 1rem; width: 100%; background-color: #dcdcdc;overflow:auto;">
+								<div id="customText" style="display: inline-block; word-break:keep-all;white-space:pre;">-</div>
 							</div>
 
 						</div>
@@ -345,12 +336,12 @@
 
 					
 					<!-- 주문 메모 수정 버튼 모달 창 -->
-					<div id="popupDiv">
+					<div id="popupDiv" class="orderMemoUpdateModal">
 						<!-- 팝업창 -->
 						<div style="width:100%; height:40px; background-color:white; padding:1%">
 							<a style="font-weight:bold">주문 메모</a>
 							<button id="popCloseBtn"><i class="fas fa-undo-alt"></i>취소</button>
-							<button><i class="fas fa-check"></i>완료</button>
+							<button id="popCompleteBtn"><i class="fas fa-check"></i>완료</button>
 						</div>
 						<div style="height:7px"></div>
 						<div style="width:100%; height:173px;background-color:white; padding:1%">
@@ -398,19 +389,28 @@
 							height:370px; background-color:white; border:1px solid gray">
 							<table id="aboutSend" style="width:100%; border:1px solid black">
 								<tr style="padding:3%">
-									<th><input type="checkbox" checked="checked"/></th>
-									<th width="190px">주문번호</th>
-									<th>주문상태</th>
-									<th>받는사람</th>
-									<th>전화번호</th>
-									<th width="310px">주소</th>
-									<th width="160px">
-										<input id="beforeDate" type="date" max="2020-07-14">
+									<th id="asdfasdf"><input type="checkbox" checked="checked"/></th>
+									<th id="asdfasdf" width="190px">주문번호</th>
+									<th id="asdfasdf">주문상태</th>
+									<th id="asdfasdf">받는사람</th>
+									<th id="asdfasdf">전화번호</th>
+									<th id="asdfasdf" width="310px">주소</th>
+									<th width="160px" style="background-color:#dcdcdc">
+										<table style="width:150px; height:30px; margin-left:2%; background-color:white">
+											<tr style="width:150px; height:30px" >
+												<th style="border:1px solid gray; text-align:left; padding-right:2%">
+													<a style="text-align:left">&nbsp;배송일 선택</a>
+												</th>
+												<th style="text-align:center">
+													<i class="far fa-calendar" style=" margin-left:2%"></i>
+												</th>
+											</tr>
+										</table>
 									</th>
-									<th width="160px">
+									<th id="asdfasdf" width="160px">
 										<select style="width:150px; height:30px"><option>택배사 선택</option></select>
 									</th>
-									<th width="170px">
+									<th id="asdfasdf" width="170px">
 										<input type="text" value="운송장 번호" size="10" readonly/>
 										<input type="button" value="확인" style="background-color:red; color:white" readonly />
 									</th>
@@ -425,14 +425,16 @@
 									<td><input id="beforeDate" type="date" value="2020-07-15" max="2030-01-01" style="width:150px; height:30px"></td>
 									<td>
 										<select style="width:150px; height:30px">
-											<option>한진 택배</option>
-											<option>대한 통운</option>
-											<option>우체국 택배</option>
-											<option>로젠 택배</option>
+											<option>CJ대한 통운</option>
+										<option>우체국 택배</option>
+										<option>우체국 등기</option>
+										<option>한진 택배</option>
+										<option>롯데 택배</option>
+										<option>로젠 택배</option>
 										</select>
 									</td>
 									<td>
-										<input type="text" size="18"/>
+										<input id="number" type="text" size="18"/>
 									</td>
 								</tr>
 							</table>
@@ -485,7 +487,9 @@
 	
 	<script>
 		$(document).ready(function(){
+			// 주문 메모 수정 버튼 클릭시..
 	        $("#popOpenBtn").click(function(event){  //팝업 Open 버튼 클릭 시 
+	        
 	        	const xButton = event.pageX;
 	            const yButton = event.pageY;
 	            
@@ -496,25 +500,42 @@
 	                //"left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
 	                //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
 	             }); 
+	            $("#orderText").val($("#orderMemo").text());
 	            $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
 	            $("#popupDiv").css("display","block"); //팝업창 display block
 	            $("#orderText").focus();
-	            
-	            
-	            //$("body").css("overflow","hidden");//body 스크롤바 없애기
+	       			
 	        });
+			
+	   		// 주문메모 모달창 완료 버튼 클릭시
+			$("#popCompleteBtn").click(function(event){
+				const text = $("#orderText").val();
+	        	console.log(text);
+	        	$("#orderMemo").text(text);
+	        	$("#orderText").val('');
+	        	
+				$("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+	            $("#popupDiv").css("display","none"); //팝업창 display none
+	            $("body").css("overflow","auto");//body 스크롤바 생성
+			});
+	     
+			// 주문메모 모달창 취소 버튼 클릭시
 	        $("#popCloseBtn").click(function(event){
 	            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
 	            $("#popupDiv").css("display","none"); //팝업창 display none
 	            $("body").css("overflow","auto");//body 스크롤바 생성
 	            $("#orderText").val('');
 	        });
-		});
+			
+			
 		
-		$(document).ready(function(){
+	        
+	        // 회원 메모 수정 버튼 클릭시.
 	        $("#popCustomOpenBtn").click(function(event){  //팝업 Open 버튼 클릭 시 
+	        	
 	        	const xButton = event.pageX;
 	            const yButton = event.pageY;
+	            
 	             $("#popupCustomer").css({
             	 	"top": yButton + "px",
 	            	"left": xButton + "px"
@@ -522,33 +543,39 @@
 	                //"left": (($(window).width()-$("#popupCustomer").outerWidth())/2+$(window).scrollLeft())+"px"
 	                //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
 	             }); 
+	            $("#customerText").val($("#customText").text());
 	            $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
 	            $("#popupCustomer").css("display","block"); //팝업창 display block
 	            $("#customerText").focus();
 	            
-	            //$("body").css("overflow","hidden");//body 스크롤바 없애기
 	        });
-	       
 	        
-	        $("popCustomCompleteBtn").click(function(event){
-	        	const customText = $("#customerText").val();
-	        	console.log(customText);
-	        	
+	    	// 회원 메모 수정 모달 완료 버튼 클릭시.
+	   	    $("#popCustomCompleteBtn").click(function(event){
+	        	const text = $("#customerText").val();
+	        	console.log(text);
+	        	$("#customText").text(text);
+	        	$("#customerText").val('');
 	        	$("#popup_mask").css("display","none");
 	        	$("#popupCustomer").css("display","none");
 	        	$("body").css("overflow","auto");
 	        });
-	        
+	     
+	   		// 회원 메모 수정 모달 취소 버튼 클릭시.
 	        $("#popCustomCloseBtn").click(function(event){
 	            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
 	            $("#popupCustomer").css("display","none"); //팝업창 display none
 	            $("body").css("overflow","auto");//body 스크롤바 생성
 	            $("#customerText").val('');
 	        });
-		});
-		
-		$(document).ready(function(){
-	        $("#aboutSendButton").click(function(event){  //팝업 Open 버튼 클릭 시 
+	        
+	   		
+	   		
+	   		
+	        
+	        // 배송정보 입력 버튼
+	        $("#aboutSendButton").click(function(event){  //팝업 Open 버튼 클릭 시 	
+	        	
 	             $("#sendModal").css({
 	                "top": (($(window).height()-$("#sendModal").outerHeight())/2+$(window).scrollTop())+"px",
 	                "left": (($(window).width()-$("#sendModal").outerWidth())/2+$(window).scrollLeft())+"px"
@@ -556,21 +583,24 @@
 	             }); 
 	            $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
 	            $("#sendModal").css("display","block"); //팝업창 display block
-	            
+	            $("#number").focus();
 	            //$("body").css("overflow","hidden");//body 스크롤바 없애기
-	        });
-	        $("#sendCloseModal").click(function(event){
-	            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
-	            $("#sendModal").css("display","none"); //팝업창 display none
-	            $("body").css("overflow","auto");//body 스크롤바 생성
-	        });
-	        $("#sendCloseModala").click(function(event){
-	            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
-	            $("#sendModal").css("display","none"); //팝업창 display none
-	            $("body").css("overflow","auto");//body 스크롤바 생성
+	            
+	            $("#sendCloseModal").click(function(event){
+		            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+		            $("#sendModal").css("display","none"); //팝업창 display none
+		            $("body").css("overflow","auto");//body 스크롤바 생성
+		        });
+		        $("#sendCloseModala").click(function(event){
+		            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+		            $("#sendModal").css("display","none"); //팝업창 display none
+		            $("body").css("overflow","auto");//body 스크롤바 생성
+		        });
+	            
 	        });
 	        
 		});
+		
 		
 		$(function() {
 		      $('#customerText').keyup(function (e){
@@ -589,6 +619,31 @@
 		      });
 		      $('#orderText').keyup();
 		});
+		
+		/*
+		$(function(){
+			$("#wrapper").click(function (e){
+            	var x = e.pageX;
+            	var y = e.pageY;
+            	var xButton = $("#popupCustomer").css("top").replace("px","");
+            	var yButton = $("#popupCustomer").css("left").replace("px","");
+            	console.log(xButton);
+            	console.log(yButton);
+            	console.log(x >= xButton);
+            	console.log(x <= (xButton + 500));
+            	console.log(y >= yButton);
+            	console.log(y <= (yButton + 250));
+            	console.log($("#popupCustomer").css("display"));
+            	if($("#popupCustomer").css("display") == "block"){
+	            	if(!(x >= xButton && x <= (xButton + 500) && y >= yButton && y <= (yButton + 250))){
+	            		$("#popup_mask").css("display","none");
+			        	$("#popupCustomer").css("display","none");
+			        	$("body").css("overflow","auto");
+	            	}
+	            }
+            });
+		});
+		*/
 		
 	</script>
 
