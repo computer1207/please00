@@ -18,9 +18,15 @@
 		<!-- Header/Nav -->
 		<jsp:include page="include/side.jsp" />
 		<div id="content-wrapper" class="d-flex flex-column">
+<<<<<<< HEAD
 			<div id="content">
 				<jsp:include page="include/head.jsp" />
 				<!-- end Header/Nav -->
+=======
+			<jsp:include page="include/head.jsp" />
+			<!-- end Header/Nav -->
+			<div id="content">
+>>>>>>> 142acb599633d6a3b241f6ce40fab22aaa963724
 
 
 

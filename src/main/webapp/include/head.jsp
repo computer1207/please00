@@ -10,6 +10,10 @@
 	
 
 		<!-- Main Content -->
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 142acb599633d6a3b241f6ce40fab22aaa963724
 			<!-- Topbar -->
 			<nav
 				class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
