@@ -13,7 +13,9 @@
 			<!-- Topbar -->
 			<nav
 				class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+				<div style="float:left">
+					작가
+				</div>
 				<!-- Sidebar Toggle (Topbar) -->
 				<button id="sidebarToggleTop"
 					class="btn btn-link d-md-none rounded-circle mr-3">
@@ -83,7 +85,7 @@
 								휴가 모드
 							</a> <a class="dropdown-item" href="#"> <i
 								class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-								금손 포인트
+								젬 포인트
 							</a> <a class="dropdown-item" href="#" data-toggle="modal"
 								data-target="#logoutModal"> <!--  <a class="dropdown-item" href="#"> -->
 								<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

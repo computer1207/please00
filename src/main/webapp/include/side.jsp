@@ -6,7 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>sidebar</title>
-
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body>
 		<!-- Sidebar -->
@@ -18,7 +24,6 @@
           <!-- 보물섬 아이콘 -->
           <i><img src="text.png" width="70" height="70"></i>
         </div>
-        <div class="sidebar-brand-text mx-3" style="font-size: 15; font-weight: bold;">작가</div>
       </a>
 
       <!-- Divider -->
@@ -33,8 +38,20 @@
 
       <div align="center">
         <!-- 작가 프로필 사진 -->
-        <a href="#"><img src="test.png" width="100" hegith="100"></a><br>
+        <a href="#"><img src="test.png" width="100" height="100"></a><br>
         <a style="color:aliceblue; font-size: 15pt; font-weight: bold;">작가명</a>
+        <div style="margin-top:2%;margin-bottom:2%;">
+        	<table style="color: white; width:80%">
+        		<tr>
+        			<th style="text-align:left; width:60%">
+        				<i class="fas fa-gem" style="color:gold"></i>&nbsp;젬포인트
+        			</th>	
+        			<th style="text-align:right; width:40%">
+        				<a>30,000</a>P
+        			</th>	
+        		</tr>
+        	</table>
+        </div>
       </div>
 
       <!-- Divider -->
