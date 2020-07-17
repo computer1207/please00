@@ -14,12 +14,13 @@
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body id="page-top">
-<div id="wrapper">
-	<!-- Header/Nav -->
-	<jsp:include page="include/side.jsp" />
-	<div id="content-wrapper" class="d-flex flex-column">
-	<jsp:include page="include/head.jsp" />
-	<!-- end Header/Nav -->
+	<div id="wrapper">
+		<!-- Header/Nav -->
+		<jsp:include page="include/side.jsp" />
+		<div id="content-wrapper" class="d-flex flex-column">
+			<jsp:include page="include/head.jsp" />
+			<!-- end Header/Nav -->
+			<div id="content">
 
 
 
@@ -27,30 +28,31 @@
 
 
 
-	
-	<jsp:include page="include/footer.jsp" />
-	<!-- end footer -->
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top"> <i
-		class="fas fa-angle-up"></i>
-	</a>
 
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+				<jsp:include page="include/footer.jsp" />
+				<!-- end footer -->
+				<!-- Scroll to Top Button-->
+				<a class="scroll-to-top rounded" href="#page-top"> <i
+					class="fas fa-angle-up"></i>
+				</a>
 
-	<!-- Core plugin JavaScript-->
-	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+				<script src="vendor/jquery/jquery.min.js"></script>
+				<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Custom scripts for all pages-->
-	<script src="js/sb-admin-2.min.js"></script>
+				<!-- Core plugin JavaScript-->
+				<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-	<!-- Page level plugins -->
-	<script src="vendor/chart.js/Chart.min.js"></script>
+				<!-- Custom scripts for all pages-->
+				<script src="js/sb-admin-2.min.js"></script>
 
-	<!-- Page level custom scripts -->
-	<script src="js/demo/chart-area-demo.js"></script>
-	<script src="js/demo/chart-pie-demo.js"></script>
+				<!-- Page level plugins -->
+				<script src="vendor/chart.js/Chart.min.js"></script>
+
+				<!-- Page level custom scripts -->
+				<script src="js/demo/chart-area-demo.js"></script>
+				<script src="js/demo/chart-pie-demo.js"></script>
+			</div>
+		</div>
 	</div>
-</div>
 </body>
 </html>
