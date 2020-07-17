@@ -72,21 +72,19 @@
 						<div
 							class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 							aria-labelledby="userDropdown">
-							<a class="dropdown-item" href="#"> <i
+							<a class="dropdown-item" href="myInformation.jsp"> <i
 								class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 내정보
-							</a> <a class="dropdown-item" href="#"> <i
+							</a> <a class="dropdown-item" href="salsePolicy.jsp"> <i
 								class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 판매정책
-							</a> <a class="dropdown-item" href="#"> <i
+							</a> <a class="dropdown-item" href="writerProfile.jsp"> <i
 								class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> 작가 프로필
 							</a>
 							<!--<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">-->
-							<a class="dropdown-item" href="#"> <i
-								class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-								휴가 모드
-							</a> <a class="dropdown-item" href="#"> <i
+							
+							<a class="dropdown-item" href="gemPoint.jsp"> <i
 								class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 								젬 포인트
-							</a> <a class="dropdown-item" href="#" data-toggle="modal"
+							</a> <a class="dropdown-item" href="login.jsp" data-toggle="modal"
 								data-target="#logoutModal"> <!--  <a class="dropdown-item" href="#"> -->
 								<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 								Logout
@@ -98,47 +96,10 @@
 					<!-- 상점 아이콘 -->
 					<li class="nav-item dropdown no-arrow mx-1"><a
 						class="nav-link dropdown-toggle" href="#" id="alertsDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> <i class="fas fa-store"></i> <!-- Counter - Alerts -->
-							<!--<span class="badge badge-danger badge-counter"> +3 </span>-->
-					</a> <!-- 알림 아이콘 메뉴창 -->
-						<div
-							class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							aria-labelledby="alertsDropdown">
-							<h6 class="dropdown-header">알림 머리글</h6>
-							<a class="dropdown-item d-flex align-items-center" href="#">
-								<div class="mr-3">
-									<div class="icon-circle bg-primary">
-										<i class="fas fa-file-alt text-white"></i>
-									</div>
-								</div>
-								<div>
-									<div class="small text-gray-500">1</div>
-									<span class="font-weight-bold">첫번쨰</span>
-								</div>
-							</a> <a class="dropdown-item d-flex align-items-center" href="#">
-								<div class="mr-3">
-									<div class="icon-circle bg-success">
-										<i class="fas fa-donate text-white"></i>
-									</div>
-								</div>
-								<div>
-									<div class="small text-gray-500">2</div>
-									두번쨰
-								</div>
-							</a> <a class="dropdown-item d-flex align-items-center" href="#">
-								<div class="mr-3">
-									<div class="icon-circle bg-warning">
-										<i class="fas fa-exclamation-triangle text-white"></i>
-									</div>
-								</div>
-								<div>
-									<div class="small text-gray-500">3</div>
-									세번째
-								</div>
-							</a> <a class="dropdown-item text-center small text-gray-500"
-								href="#">전체 알림 보기</a>
-						</div></li>
+						> <i class="fas fa-store"></i> 
+						<!-- 판매자 페이지 작가 홈으로 -->
+						</a> 
+					</li>
 
 					<!-- 알림 아이콘 -->
 					<li class="nav-item dropdown no-arrow mx-1"><a
@@ -182,7 +143,7 @@
 									세번째
 								</div>
 							</a> <a class="dropdown-item text-center small text-gray-500"
-								href="#">전체 알림 보기</a>
+								href="alarm.jsp">전체 알림 보기</a>
 						</div></li>
 
 					<!-- 메세지 아이콘 -->
@@ -243,14 +204,13 @@
 									<div class="small text-gray-500">Chicken the Dog · 2w</div>
 								</div>
 							</a> <a class="dropdown-item text-center small text-gray-500"
-								href="#">Read More Messages</a>
+								href="messageList.jsp">전체 메세지 보기</a>
 						</div></li>
 
 					<!-- 물음표 아이콘 -->
 					<li class="nav-item dropdown no-arrow mx-1"><a
-						class="nav-link dropdown-toggle" href="#" id="alertsDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> <i class="fas fa-question-circle"></i>
+						class="nav-link dropdown-toggle" href="tables.jsp" id="alertsDropdown"
+						role="button"> <i class="fas fa-question-circle"></i>
 					</a></li>
 
 					<div class="topbar-divider d-none d-sm-block"></div>

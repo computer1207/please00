@@ -90,9 +90,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Components:</h6>-->
-            <a class="collapse-item" href="#">판매중</a>
-            <a class="collapse-item" href="#">판매 일시중지</a>
-            <a class="collapse-item" href="#">작품등록</a>
+            <a class="collapse-item" href="onSale.jsp">판매중</a>
+            <a class="collapse-item" href="pauseOnSales.jsp">판매 일시중지</a>
+            <a class="collapse-item" href="workRegister.jsp">작품등록</a>
           </div>
         </div>
       </li>
@@ -107,8 +107,7 @@
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Components:</h6>-->
-            <a class="collapse-item" href="#">메시지 리스트</a>
-            <a class="collapse-item" href="#">개별 메세지 보내기</a>
+            <a class="collapse-item" href="messageList.jsp">메시지 리스트</a>
           </div>
         </div>
       </li>
@@ -124,9 +123,9 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Utilities:</h6>
             <a class="collapse-item" href="utilities-color.html">Colors</a>-->
-            <a class="collapse-item" href="#">알림</a>
-            <a class="collapse-item" href="#">구매후기</a>
-            <a class="collapse-item" href="#">댓글</a>
+            <a class="collapse-item" href="alarm.jsp">알림</a>
+            <a class="collapse-item" href="review.jsp">구매후기</a>
+            <a class="collapse-item" href="comments.jsp">댓글</a>
           </div>
         </div>
       </li>
@@ -135,11 +134,11 @@
       <hr class="sidebar-divider">
       -->
 
-      <!-- 스토리 -->
+      <!-- 스토리 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
           aria-controls="collapseFive">
-          <!--<i class="fas fa-fw fa-folder"></i>-->
+          <!--<i class="fas fa-fw fa-folder"></i>--
           <span>스토리</span>
         </a>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionSidebar">
@@ -153,12 +152,13 @@
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
-            -->
-            <a class="collapse-item" href="#">스토리 관리</a>
-            <a class="collapse-item" href="#">스토리 등록</a>
+            --
+            <a class="collapse-item" href="storyManage.jsp">스토리 관리</a>
+            <a class="collapse-item" href="storyRegister.jsp">스토리 등록</a>
           </div>
         </div>
       </li>
+      -->
 
       <!-- 작품 소문내기 -->
       <li class="nav-item">
@@ -171,7 +171,7 @@
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionSidebar">
 
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">작가님 추천</a>
+            <a class="collapse-item" href="recommendWriter.jsp">작가님 추천</a>
             <!--
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="login.html">Login</a>
@@ -187,11 +187,11 @@
         </div>
       </li>
 
-      <!-- 쿠폰 -->
+      <!-- 쿠폰 --
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
           aria-controls="collapseSeven">
-          <!--<i class="fas fa-fw fa-folder"></i>-->
+          <!--<i class="fas fa-fw fa-folder"></i>--
           <span>쿠폰</span>
         </a>
         <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionSidebar">
@@ -205,13 +205,13 @@
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
-            -->
-            <a class="collapse-item" href="#">쿠폰 관리</a>
-            <a class="collapse-item" href="#">일반 쿠폰 만들기</a>
+            --
+            <a class="collapse-item" href="couponManage.jsp">쿠폰 관리</a>
+            <a class="collapse-item" href="couponMake.jsp">일반 쿠폰 만들기</a>
           </div>
         </div>
       </li>
-
+		-->
       <!-- 통계 및 정산 -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true"
@@ -232,8 +232,7 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="#">매출</a>
-            <a class="collapse-item" href="#">정산</a>
+            <a class="collapse-item" href="sales.jsp">매출</a>
           </div>
 
 
@@ -260,11 +259,10 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="#">내정보</a>
-            <a class="collapse-item" href="#">판매정책</a>
-            <a class="collapse-item" href="#">작가 프로필</a>
-            <a class="collapse-item" href="#">휴가 모드</a>
-            <a class="collapse-item" href="#">금손 포인트</a>
+            <a class="collapse-item" href="myInformation.jsp">내정보</a>
+            <a class="collapse-item" href="salsePolicy.jsp">판매정책</a>
+            <a class="collapse-item" href="writerProfile.jsp">작가 프로필</a>
+            <a class="collapse-item" href="gemPoint.jsp">금손 포인트</a>
           </div>
         </div>
       </li>
@@ -289,9 +287,9 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="tables.jsp">공지사항</a>
-            <a class="collapse-item" href="#">정책/등록 가이드</a>
-            <a class="collapse-item" href="#">자주 묻는 질문</a>
+            <a class="collapse-item" href="announcement.jsp">공지사항</a>
+            <a class="collapse-item" href="policy_guide.jsp">정책/등록 가이드</a>
+            <a class="collapse-item" href="question.jsp">자주 묻는 질문</a>
           </div>
         </div>
       </li>

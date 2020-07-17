@@ -77,25 +77,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- 취소 요청 -->
-					<div class="card shadow mb-4">
-						<div class="card-header py-3">
-							<div class="m-0 font-weight-bold text-primary"
-								style="display: inline-block">취소 요청</div>
-							<span>0</span>
-							<hr class="sidebar-divider my-0">
-							<!-- 취소 요청 박스 -->
-							<div
-								style="padding-right: 0rem; padding-left: 0rem; padding-top: 1rem">
-								<div class="card border-bottom-primary shadow h-100 py-2"
-									style="padding-top: 0rem !important; padding-bottom: 0rem !important">
-									<div align="center" style="margin: 2rem 2rem 2rem 2rem">요청
-										건이 없습니다.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
+					
 					<!-- 환불 요청 -->
 					<div class="card shadow mb-4">
 						<div class="card-header py-3">
@@ -115,24 +97,6 @@
 						</div>
 					</div>
 
-					<!-- 교환 요청 -->
-					<div class="card shadow mb-4">
-						<div class="card-header py-3">
-							<div class="m-0 font-weight-bold text-primary"
-								style="display: inline-block">교환 요청</div>
-							<span>0</span>
-							<hr class="sidebar-divider my-0">
-							<!-- 교환 요청 박스 -->
-							<div
-								style="padding-right: 0rem; padding-left: 0rem; padding-top: 1rem">
-								<div class="card border-bottom-primary shadow h-100 py-2"
-									style="padding-top: 0rem !important; padding-bottom: 0rem !important">
-									<div align="center" style="margin: 2rem 2rem 2rem 2rem">요청
-										건이 없습니다.</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 
