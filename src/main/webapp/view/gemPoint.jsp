@@ -20,7 +20,7 @@
 
 
 .flexContainer{
-	width: 80%;
+	width: 90%;
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
@@ -32,6 +32,7 @@
 }
 
 .paging {
+
     margin-top:20px;
     text-align: center;
     margin-bottom:100px;
@@ -53,15 +54,15 @@
    border:0px;
 }
 
-table {
+.subcontent table {
 	/*font-family: arial, sans-serif;*/
 	border-collapse: collapse;
-	width: 80%;
+	width: 90%;
 	margin-bottom: 50px;
 }
 
 
-td, th {
+.daintdth {
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 	text-align: left;
@@ -69,15 +70,17 @@ td, th {
 }
 
 
-th {
-	width: 20%;
+.subcontent th {
 	background-color: #f2f2f2;
 }
 
-h4, h5 {
+.subcontent h4, h5 {
 	font-weight: bold;
 }
 
+footer span{
+	margin-right: 10%;
+}
 
 </style>
 
@@ -98,22 +101,25 @@ h4, h5 {
 					<hr>
 					<br />
 					<!-- 젬 포인트 테이블 -->
-					<p>젬 포인트는 작가님들의 작품 홍보를 위해 제공되는 가상 포인트 제도입니다. <br> 
-					매월 일정량의 젬 포인트를 충전해드리고, 이 충전된 포인트를 작가님 추천에 사용할 수 있습니다.</p>
+					<p>
+						젬 포인트는 작가님들의 작품 홍보를 위해 제공되는 가상 포인트 제도입니다. <br> 매월 일정량의 젬 포인트를
+						충전해드리고, 이 충전된 포인트를 작가님 추천에 사용할 수 있습니다.
+					</p>
 					<table>
 						<tr>
-							<th>보유 포인트</th>
+							<th class="daintdth" style="width: 20%">보유 포인트</th>
 							<!-- 여기에 값 들어가야함 -->
-							<td id="gemPoint" class="bold" style="color: #00CED1;">0P</td>
+							<td class="daintdth" id="gemPoint" class="bold"
+								style="color: #00CED1; width: 80%">0P</td>
 						</tr>
 						<tr>
-							<th>7일 이내에 만료되는 포인트</th>
-							<td id="expPoint">0P</td>
+							<th class="daintdth" style="width: 20%">7일 이내에 만료되는 포인트</th>
+							<td class="daintdth" id="expPoint" style="width: 80%">0P</td>
 						</tr>
 					</table>
 
 					<div class="flexContainer">
-						<h5 style="margin: 0;">이용 내역</h5>
+						<h5 style="margin: 0; font-weight: bold">이용 내역</h5>
 						<!-- 몇개씩 보는지 선택옵션 -->
 						<select name="pointViewOption">
 							<option value="view10">10개씩 보기</option>
@@ -121,47 +127,52 @@ h4, h5 {
 							<option value="view30">30개씩 보기</option>
 						</select>
 					</div>
-					<!-- 이용 내역 테이블 -->	
-					<table >
-					<!-- 테이블 제목 -->
+					<!-- 이용 내역 테이블 -->
+					<table>
+						<!-- 테이블 제목 -->
 						<tr>
-							<th style="width: 15%; text-align: center;">일자</th>
-							<th style="width: 55%; text-align: center;">내역</th>
-							<th style="width: 15%; text-align: center;">포인트</th>
-							<th style="width: 15%; text-align: center;">유효기간</th>
+							<th class="daintdth" style="width: 18%; text-align: center;">일자</th>
+							<th class="daintdth" style="width: 46%; text-align: center;">내역</th>
+							<th class="daintdth" style="width: 18%; text-align: center;">포인트</th>
+							<th class="daintdth" style="width: 18%; text-align: center;">유효기간</th>
 						</tr>
-					<!-- 테이블 내용 -->
+						<!-- 테이블 내용 -->
 						<tr>
-							<td style="text-align: center">2020-07-01</td>
-							<td>보물섬 지급 포인트</td>
-							<td class="bold" style="text-align: center; color: #00CED1;">+30,000P</td>
-							<td style="text-align: center">2020-07-31</td>
-						</tr>
-						<tr>
-							<td style="text-align: center">2020-06-30</td>
-							<td>유효기간 만료</td>
-							<td class="bold" style="text-align: center; color: #cb2121;">-30,000P</td>
-							<td style="text-align: center">-</td>
+							<td class="daintdth" style="text-align: center">2020-07-01</td>
+							<td class="daintdth">보물섬 지급 포인트</td>
+							<td class="daintdth bold"
+								style="text-align: center; color: #00CED1;">+30,000P</td>
+							<td class="daintdth" style="text-align: center">2020-07-31</td>
 						</tr>
 						<tr>
-							<td style="text-align: center">2020-06-01</td>
-							<td>보물섬 지급 포인트</td>
-							<td class="bold" style="text-align: center; color: #00CED1;">+30,000P</td>
-							<td style="text-align: center">2020-06-30</td>
+							<td class="daintdth" style="text-align: center">2020-06-30</td>
+							<td class="daintdth">유효기간 만료</td>
+							<td class="daintdth bold"
+								style="text-align: center; color: #cb2121;">-30,000P</td>
+							<td class="daintdth" style="text-align: center">-</td>
 						</tr>
 						<tr>
-							<td style="text-align: center">2020-05-31</td>
-							<td>유효기간 만료</td>
-							<td class="bold" style="text-align: center; color: #cb2121;">-30,000P</td>
-							<td style="text-align: center">-</td>
+							<td class="daintdth" style="text-align: center">2020-06-01</td>
+							<td class="daintdth">보물섬 지급 포인트</td>
+							<td class="daintdth bold"
+								style="text-align: center; color: #00CED1;">+30,000P</td>
+							<td class="daintdth" style="text-align: center">2020-06-30</td>
+						</tr>
+						<tr>
+							<td class="daintdth" style="text-align: center">2020-05-31</td>
+							<td class="daintdth">유효기간 만료</td>
+							<td class="daintdth bold"
+								style="text-align: center; color: #cb2121;">-30,000P</td>
+							<td class="daintdth" style="text-align: center">-</td>
 						</tr>
 					</table>
-				</div>
-				
-				<!-- 페이징 처리 -->
-				<div class="paging" style="width: 80%;">
-					<a class="arrow prev" href="#">이전</a> <a href="#">1</a> <a
-						class="arrow next" href="#">다음</a>
+
+					<!-- 페이징 처리 -->
+					<div class="paging" style="width: 90%;">
+						<a class="arrow prev" href="#">이전</a> <a href="#">1</a> <a
+							class="arrow next" href="#">다음</a>
+					</div>
+
 				</div>
 
 

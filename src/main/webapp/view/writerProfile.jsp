@@ -24,6 +24,7 @@ $(function() {
     });
     $('#content').keyup();
 });
+
 $(function() {
     $('#content2').keyup(function (e){
         var content2 = $(this).val();
@@ -32,7 +33,6 @@ $(function() {
     });
     $('#content2').keyup();
 });
-
 
 function setThumbnail(event) {
 	var reader = new FileReader();
@@ -92,31 +92,34 @@ function setThumbnail2(event) {
 
 .subcontent {
 	margin-left: 2%;
+
 }
 
-table {
+.subcontent table {
 	/*font-family: arial, sans-serif;*/
 	border-collapse: collapse;
-	width: 80%;
+	width: 90%;
 }
 
-td, th {
+.daintdth {
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
 }
 
-th {
+.subcontent th {
 	width: 15%;
 	background-color: #f2f2f2;
 }
 
-h4, h5 {
+.subcontent h4, h5 {
 	font-weight: bold;
 }
 
-
+footer span{
+	margin-right: 10%;
+}
 </style>
 
 </head>
@@ -137,48 +140,48 @@ h4, h5 {
 					<br />
 
 					<!-- 기본프로필 테이블 -->
-					<h5>기본 프로필</h5>
+					<h5 style="font-weight: bold;">기본 프로필</h5>
 					<p>서비스 내에서 노출되는 작가명 및 사진을 설정할 수 있습니다.</p>
 					<form action="#">
 						<table>
 							<tr>
-								<th>프로필 사진</th>
-								<td style="font-size: 12px; width: 7%;">
+								<th class="daintdth" style="width: 15%;">프로필 사진</th>
+								<td class="daintdth" style="font-size: 12px; width: 7%;">
 									<!-- 여기 이미지 썸네일 들어감 --> 
 									<img id="coverPic" />
 								</td>
-								<td style="width: 15%;">
+								<td  class="daintdth" style="width: 28%;">
 									<input type="file" id="image" accept=".jpg, .jpeg, .png" onchange="setThumbnail(event);"/>
 									<div style="font-size: 12px">
 										<br>320px 이상 정사각형 이미지<br>확장자 jpg,png만 가능
 									</div>
 								</td>
-								<th>커버 사진</th>
-								<td style="font-size: 12px; width: 7%;">
+								<th class="daintdth" style="width: 15%;" >커버 사진</th>
+								<td class="daintdth" style="font-size: 12px; width: 7%;">
 									<!-- 여기 이미지 썸네일 들어감 -->
 									<img id="coverPic2"/> </td>
-								<td style="width: 15%;">
+								<td class="daintdth" style="width: 28%;">
 								<input type="file" id="image" accept=".jpg, .jpeg, .png" onchange="setThumbnail2(event);"/>
 									<div style="font-size: 12px">
 										<br>320px 이상 정사각형 이미지<br>확장자 jpg,png만 가능
 									</div></td>
 							</tr>
 							<tr>
-								<th>작가명 (브랜드)</th>
-								<td colspan="5"><input type="text" id="content" name="brandName" maxlength="20" style="max-height: 30px;"/>
+								<th class="daintdth" style="width: 15%;" >작가명 (브랜드)</th>
+								<td class="daintdth" colspan="5" style="width: 85%;"><input type="text" id="content" name="brandName" maxlength="20" style="max-height: 30px; "/>
 								<span id="counter" style="font-size: 12px"> ### </span></td>
 							</tr>
 							<tr>
-								<th>세줄 소개</th>
-								<td colspan="5"><textarea id="content2" placeholder="작가님을 소개하는 글을 적어주세요." maxlength="500" 
-										style="overflow-y: scroll; min-height: 100px; max-height:100px; min-width: 60%; max-width: 60%;"></textarea>
+								<th class="daintdth" style="width: 15%;">세줄 소개</th>
+								<td class="daintdth" colspan="5" style="width: 15%;"><textarea id="content2" placeholder="작가님을 소개하는 글을 적어주세요." maxlength="500" 
+										style="overflow-y: scroll;  min-height: 100px; max-height:100px; min-width: 60%; max-width: 60%;"></textarea>
 										<div id="counter2" style="font-size: 12px"> ### </div></td>
 							</tr>
 						</table>
 
 						<br> <br /> <br>
 						<div class="spButton">
-							<div style="text-align: center; width: 80%;">
+							<div style="text-align: center; width: 90%;">
 								<button type="submit">확인</button>
 							</div>
 						</div>
@@ -186,7 +189,6 @@ h4, h5 {
 					<br> <br />
 
 				</div>
-
 
 
 				<jsp:include page="include/footer.jsp" />
