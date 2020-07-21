@@ -6,23 +6,23 @@
 <head>
 <meta charset="UTF-8">
 <title>sidebar</title>
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+<link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
 	type="text/css">
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 	rel="stylesheet">
 <!-- Custom styles for this template-->
-<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<link href="../css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body>
 		<!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- 왼쪽 메뉴바 -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.jsp">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home.jsp">
         <div>
           <!-- 보물섬 아이콘 -->
-          <i><img src="text.png" width="70" height="70"></i>
+          <i><img src="<c:url value='/view/img/text.png'/>" width="70" height="70"></i>
         </div>
       </a>
 
@@ -38,7 +38,7 @@
 
       <div align="center">
         <!-- 작가 프로필 사진 -->
-        <a href="#"><img src="test.png" width="100" height="100"></a><br>
+        <a href="#"><img src="<c:url value='/view/img/MainLogo_white.png'/>" width="100" height="100"></a><br>
         <a style="color:aliceblue; font-size: 15pt; font-weight: bold;">작가명</a>
         <div style="margin-top:2%;margin-bottom:2%;">
         	<table style="color: white; width:80%">
@@ -73,9 +73,9 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Components:</h6>-->
-            <a class="collapse-item" href="orderCondition.jsp">현황</a>
-            <a class="collapse-item" href="orderList.jsp">주문 리스트</a>
-            <a class="collapse-item" href="registerOfShip.jsp">발송 정보 일괄 등록</a>
+            <a class="collapse-item" href="<c:url value='/view/worder/orderCondition.jsp'/>">현황</a>
+            <a class="collapse-item" href="<c:url value='/view/worder/orderList.jsp'/>">주문 리스트</a>
+            <a class="collapse-item" href="<c:url value='/view/worder/registerOfShip.jsp'/>">발송 정보 일괄 등록</a>
           </div>
         </div>
       </li>
@@ -90,9 +90,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Components:</h6>-->
-            <a class="collapse-item" href="onSale.jsp">판매중</a>
-            <a class="collapse-item" href="pauseOnSales.jsp">판매 일시중지</a>
-            <a class="collapse-item" href="workRegister.jsp">작품등록</a>
+            <a class="collapse-item" href="<c:url value='/view/warticle/onSale.jsp'/>">판매중</a>
+            <a class="collapse-item" href="<c:url value='/view/warticle/pauseOnSales.jsp'/>">판매 일시중지</a>
+            <a class="collapse-item" href="<c:url value='/view/warticle/workRegister.jsp'/>">작품등록</a>
           </div>
         </div>
       </li>
@@ -107,7 +107,7 @@
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Components:</h6>-->
-            <a class="collapse-item" href="messageList.jsp">메시지 리스트</a>
+            <a class="collapse-item" href="<c:url value='/view/wmessage/messageList.jsp'/>">메시지 리스트</a>
           </div>
         </div>
       </li>
@@ -123,9 +123,9 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <!--<h6 class="collapse-header">Custom Utilities:</h6>
             <a class="collapse-item" href="utilities-color.html">Colors</a>-->
-            <a class="collapse-item" href="alarm.jsp">알림</a>
-            <a class="collapse-item" href="review.jsp">구매후기</a>
-            <a class="collapse-item" href="comments.jsp">댓글</a>
+            <a class="collapse-item" href="<c:url value='/view/wactivity/alarm.jsp'/>">알림</a>
+            <a class="collapse-item" href="<c:url value='/view/wactivity/review.jsp'/>">구매후기</a>
+            <a class="collapse-item" href="<c:url value='/view/wactivity/comments.jsp'/>">댓글</a>
           </div>
         </div>
       </li>
@@ -171,7 +171,7 @@
         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionSidebar">
 
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="recommendWriter.jsp">작가님 추천</a>
+            <a class="collapse-item" href="<c:url value='/view/wrecommend/recommendWriter.jsp'/>">작가님 추천</a>
             <!--
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="login.html">Login</a>
@@ -232,7 +232,7 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="sales.jsp">매출</a>
+            <a class="collapse-item" href="<c:url value='/view/wstats/sales.jsp'/>">매출</a>
           </div>
 
 
@@ -259,10 +259,10 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="myInformation.jsp">내정보</a>
-            <a class="collapse-item" href="salsePolicy.jsp">판매정책</a>
-            <a class="collapse-item" href="writerProfile.jsp">작가 프로필</a>
-            <a class="collapse-item" href="gemPoint.jsp">금손 포인트</a>
+            <a class="collapse-item" href="<c:url value='/view/waccount/myInformation.jsp'/>">내정보</a>
+            <a class="collapse-item" href="<c:url value='/view/waccount/salsePolicy.jsp'/>">판매정책</a>
+            <a class="collapse-item" href="<c:url value='/view/waccount/writerProfile.jsp'/>">작가 프로필</a>
+            <a class="collapse-item" href="<c:url value='/view/waccount/gemPoint.jsp'/>">금손 포인트</a>
           </div>
         </div>
       </li>
@@ -287,9 +287,9 @@
             <a class="collapse-item" href="404.html">404 Page</a>
             <a class="collapse-item" href="blank.html">Blank Page</a>
             -->
-            <a class="collapse-item" href="announcement.jsp">공지사항</a>
-            <a class="collapse-item" href="policy_guide.jsp">정책/등록 가이드</a>
-            <a class="collapse-item" href="question.jsp">자주 묻는 질문</a>
+            <a class="collapse-item" href="<c:url value='/view/wborder/announcement.jsp'/>">공지사항</a>
+            <a class="collapse-item" href="<c:url value='/view/wborder/policy_guide.jsp'/>">정책/등록 가이드</a>
+            <a class="collapse-item" href="<c:url value='/view/wborder/question.jsp'/>">자주 묻는 질문</a>
           </div>
         </div>
       </li>

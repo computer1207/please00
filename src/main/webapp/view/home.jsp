@@ -39,10 +39,10 @@
 <body id="page-top">
 	<div id="wrapper">
 		<!-- Header/Nav -->
-		<jsp:include page="include/side.jsp" />
+		<%@ include file="/view/include/side.jsp" %>
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
-				<jsp:include page="include/head.jsp" />
+				<%@ include file="/view/include/head.jsp" %>
 				<!-- end Header/Nav -->
 				<div style="margin-left: 2%; margin-right: 2%;">
 					<h2 style="text-style: bold; margin-bottom: 0rem;">요약</h2>
@@ -192,7 +192,7 @@
 
 				</div>
 
-				<jsp:include page="include/footer.jsp" />
+				<%@ include file="/view/include/footer.jsp" %>
 				<!-- end footer -->
 				<!-- Scroll to Top Button-->
 				<a class="scroll-to-top rounded" href="#page-top"> <i

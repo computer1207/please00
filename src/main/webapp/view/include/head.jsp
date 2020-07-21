@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,19 +73,19 @@
 						<div
 							class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 							aria-labelledby="userDropdown">
-							<a class="dropdown-item" href="myInformation.jsp"> <i
+							<a class="dropdown-item" href="<c:url value='/view/waccount/myInformation.jsp'/>"> <i
 								class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> 내정보
-							</a> <a class="dropdown-item" href="salsePolicy.jsp"> <i
+							</a> <a class="dropdown-item" href="<c:url value='/view/waccount/salsePolicy.jsp'/>"> <i
 								class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> 판매정책
-							</a> <a class="dropdown-item" href="writerProfile.jsp"> <i
+							</a> <a class="dropdown-item" href="<c:url value='/view/waccount/writerProfile.jsp'/>"> <i
 								class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> 작가 프로필
 							</a>
 							<!--<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">-->
 							
-							<a class="dropdown-item" href="gemPoint.jsp"> <i
+							<a class="dropdown-item" href="<c:url value='/view/waccount/gemPoint.jsp'/>"> <i
 								class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 								젬 포인트
-							</a> <a class="dropdown-item" href="login.jsp" data-toggle="modal"
+							</a> <a class="dropdown-item" href="<c:url value='/view/wlogin/login.jsp'/>" data-toggle="modal"
 								data-target="#logoutModal"> <!--  <a class="dropdown-item" href="#"> -->
 								<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 								Logout
@@ -143,7 +144,7 @@
 									세번째
 								</div>
 							</a> <a class="dropdown-item text-center small text-gray-500"
-								href="alarm.jsp">전체 알림 보기</a>
+								href="<c:url value='/view/wactivity/alarm.jsp'/>">전체 알림 보기</a>
 						</div></li>
 
 					<!-- 메세지 아이콘 -->
@@ -159,7 +160,7 @@
 							<h6 class="dropdown-header">Message Center</h6>
 							<a class="dropdown-item d-flex align-items-center" href="#">
 								<div class="dropdown-list-image mr-3">
-									<img class="rounded-circle"
+									<  class="rounded-circle"
 										src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
 									<div class="status-indicator bg-success"></div>
 								</div>
@@ -204,12 +205,12 @@
 									<div class="small text-gray-500">Chicken the Dog · 2w</div>
 								</div>
 							</a> <a class="dropdown-item text-center small text-gray-500"
-								href="messageList.jsp">전체 메세지 보기</a>
+								href="<c:url value='/view/wmessage/messageList.jsp'/>">전체 메세지 보기</a>
 						</div></li>
 
 					<!-- 물음표 아이콘 -->
 					<li class="nav-item dropdown no-arrow mx-1"><a
-						class="nav-link dropdown-toggle" href="tables.jsp" id="alertsDropdown"
+						class="nav-link dropdown-toggle" href="<c:url value='/view/wother/tables.jsp'/>" id="alertsDropdown"
 						role="button"> <i class="fas fa-question-circle"></i>
 					</a></li>
 
@@ -236,7 +237,7 @@
 						<div class="modal-footer">
 							<button class="btn btn-secondary" type="button"
 								data-dismiss="modal">Cancel</button>
-							<a class="btn btn-primary" href="login.jsp">Logout</a>
+							<a class="btn btn-primary" href="<c:url value='/view/wlogin/login.jsp'/>">Logout</a>
 						</div>
 					</div>
 				</div>
