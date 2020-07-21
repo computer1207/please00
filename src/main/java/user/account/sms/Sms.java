@@ -5,6 +5,7 @@ import java.net.URLDecoder;
 import java.util.HashMap;
 
 import org.json.simple.JSONObject;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,17 +16,17 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 
 @Controller
-public class Sms {
+public class Sms implements BeanNameAware {
 	
 	@ResponseBody
-	@RequestMapping("/user_view/user_login/newAccountEmail")
+	@RequestMapping("/user_view/ulogin/unewAccountEmail")
 	public void sendMessage(@RequestParam String msg, @RequestParam String receiver) throws UnsupportedEncodingException {
 		
-		String msg1 = URLDecoder.decode(msg, "UTF-8");
-		String receiver1 = URLDecoder.decode(receiver, "UTF-8");
+//		String msg1 = URLDecoder.decode(msg, "UTF-8");
+//		String receiver1 = URLDecoder.decode(receiver, "UTF-8");
 		
-		System.out.println(msg1);
-		System.out.println(receiver1);
+		System.out.println(msg);
+		System.out.println(receiver);
 		
 		String api_key = "NCSRZ9EUI4F5PIVX";
 	    String api_secret = "KANEQZYC68WB7STQ6PCEIYQDC3MYVP2N";
@@ -33,10 +34,10 @@ public class Sms {
 	
 	    // 4 params(to, from, type, text) are mandatory. must be filled
 	    HashMap<String, String> params = new HashMap<String, String>();
-	    params.put("to", receiver1);
+	    params.put("to", receiver);
 	    params.put("from", "01036292628"); //무조건 자기번호 (인증)
 	    params.put("type", "SMS");
-	    params.put("text", msg1);
+	    params.put("text", msg);
 	    params.put("app_version", "test app 1.2"); // application name and version
 	
 //	    try {
@@ -47,6 +48,11 @@ public class Sms {
 //	      System.out.println(e.getMessage());
 //	      System.out.println(e.getCode());
 //	    }
+	}
+
+	@Override
+	public void setBeanName(String name) {
+		System.out.println(name);
 	}
 	
 	/*

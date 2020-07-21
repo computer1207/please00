@@ -180,7 +180,7 @@ input:focus{ outline:none; }
 						<div style="margin-bottom: 2%;height:20px">
 							<a style="color:#d8524a;margin-right:1%">*</a><a>비밀번호</a>
 						</div>
-						<input class="pwFail" type="password" style="padding-left:2%; height:40px; margin-bottom:2%; ime-mode:disabled;" placeholder="비밀번호 (영문+숫자+특수문자 8자 이상)">
+						<input class="pwFail" type="password" style="padding-left:2%; height:40px; margin-bottom:2%; ime-mode:disabled;" placeholder="비밀번호 (영문(대문자)+숫자+특수문자 8자 이상)">
 						<a id="pwFail" style="display:none; color:#d8524a; font-size:12px; margin-bottom:3%;">필수 항목입니다.</a>
 						<input class="pwCheckFail" type="password" style="padding-left:2%; height:40px; margin-bottom:5%; ime-mode:disabled;" placeholder="비밀번호 확인">
 						<a id="pwCheckFail" style="display:none; color:#d8524a; font-size:12px;  margin-bottom:5%;">필수 항목입니다.</a>
@@ -295,12 +295,12 @@ var phoneCheck = false;
 			
 			var receiveNum = $(".phoneFail").val().replace(/-/gi,''); // 보낼 전화번호.
 			console.log(receiveNum)
-			var sendMsg = encodeURIComponent("[보물섬] 본인확인 인증번호 (" + randNum + ")입력시 정상처리 됩니다.");
+			var sendMsg = "[보물섬] 본인확인 인증번호 (" + randNum + ")입력시 정상처리 됩니다.";
 			
 			console.log(randNum);
 			
 			$.ajax({
-				url : "/please/user_view/user_login/newAccountEmail",
+				url : "/please/user_view/ulogin/unewAccountEmail",
 				//?msg=" + sendMsg + "&receiver=" + receiveNum
 				data : {
 					msg : sendMsg,
