@@ -19,10 +19,8 @@
 <script>
 	function validCheck(){
 		 var pageAddress = $("#pageAddress").val();
-		// var num = pageAddress.search(/[0-9]/g);
-		// var eng = pageAddress.search(/[a-z]/ig);
-		// var spe = pageAddress.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
 		 var hangulcheck = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+		 var symbolecheck= /[`~!@#$%^&*(){}+=/,.]/gi; 
 		 
 		 if(pageAddress.length < 5 || pageAddress.length > 20){
 		  alert("5자리 ~ 20자리 이내로 입력해주세요.");
@@ -33,9 +31,11 @@
 		 }else if(hangulcheck.test(pageAddress)){
 		  alert("주소는 영문, 숫자, 하이픈(-), 언더바(_)로만 입력해주세요.");
 		  return false;
-		  //하이픈, 언더바 조건 추가해야함
-		 }else {
-		    return true;
+		 }else if (symbolecheck.test(pageAddress)) { 
+		  alert("주소는 영문, 숫자, 하이픈(-), 언더바(_)로만 입력해주세요."); 
+		  return false; 
+		}else {
+		  return true;
 		 }
 	}
 </script>
@@ -49,34 +49,39 @@
  	display: flex;
  }
 
-.btn{
+.subcontent .btn2{
 	background-color: white;
 	border: 1px solid #e7e7e7;
 	height: 35px;
 }
 
-table {
+.daintable {
 	/*font-family: arial, sans-serif;*/
 	border-collapse: collapse;
-	width: 80%;
+	width: 90%;
 	margin-bottom: 50px;
 }
 
-td, th {
+.daintdth {
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
 }
 
-th {
+.subcontent th {
 	width: 15%;
 	background-color: #f2f2f2;
 }
 
-h4, h5 {
+.subcontent h4, h5 {
 	font-weight: bold;
 }
+
+footer span{
+	margin-right: 10%;
+}
+
 </style>
 
 </head>
@@ -96,37 +101,37 @@ h4, h5 {
 					<hr>
 					<br />
 					<!-- 기본 정보 -->
-					<h5>기본정보</h5>
+					<h5 style="font-weight: bold;">기본정보</h5>
 					<p>주문 접수시 등록된 번호로 SMS가 발송되며 등록된 이메일 주소로 정산 내역 등 중요 이메일이 발송도
 						됩니다.</p>
-					<table>
+					<table class="daintable">
 						<tr>
-							<th>작가명</th>
-							<td>홍길동
+							<th class="daintdth" style="width: 15%;">작가명</th>
+							<td class="daintdth"  style="width: 85%;">홍길동
 							<!--버튼에 모달 적용-->
-							<button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">변경하기</button>
+							<button type="button" class="btn2" data-toggle="modal" data-target="#staticBackdrop">변경하기</button>
 							</td>
 						</tr>
 						<tr>
-							<th>이메일</th>
-							<td>abc@bomulsum.com</td>
+							<th class="daintdth"  style="width: 15%;">이메일</th>
+							<td class="daintdth"  style="width: 85%;">abc@bomulsum.com</td>
 							<!-- 여기 값 넣어야함 -->
 						</tr>
 						<tr>
-							<th>전화번호</th>
-							<td>010-1111-2222</td>
+							<th class="daintdth"  style="width: 15%;">전화번호</th>
+							<td class="daintdth"  style="width: 85%;">010-1111-2222</td>
 							<!-- 여기 값 넣어야함 -->
 						</tr>
 						<tr>
-							<th>작가 URL</th>
-							<td>
+							<th class="daintdth"  style="width: 15%;">작가 URL</th>
+							<td class="daintdth"  style="width: 85%;">
 								<div>
 									웹사이트를 통해 노출되는 작가님의 페이지 주소입니다.<br>
 									<form action="#" method="get">
 										http://www.bomulsum.com/ 
 										<input type="text" value="gildong" id="pageAddress" name="pageAddress" maxlength="20" />
 										<!-- URL 한번 등록되면 수정할 수 없음. 등록누르면 값 넘기고 인풋상자 수정불가하게 처리 -->
-										<input class="btn" type="submit" value="등록" onclick="validCheck()">
+										<input class="btn2" type="submit" value="등록" onclick="validCheck()">
 									</form>
 								</div>
 								<p>※ 작가 URL은 최소 5자 이상 20자 이하의 영문, 숫자, 하이픈(-), 언더바(_)로만
@@ -138,49 +143,52 @@ h4, h5 {
 
 
 					<!-- 판매 사업자 정보 테이블 -->
-					<h5>판매 사업자 정보</h5>
-					<table>
+					<h5 style="font-weight: bold;" >판매 사업자 정보</h5>
+					<table class="daintable">
 						<tr>  
-							<th>사업자명</th>
-							<td style="width: 35%;"></td>
+							<th class="daintdth"  style="width: 15%;">사업자명</th>
+							<td class="daintdth"  style="width: 35%;"></td>
 							<!-- 여기에 값 들어감 -->
-							<th>사업자 등록번호</th>
-							<td style="width: 35%;"></td>
+							<th class="daintdth"  style="width: 15%;">사업자 등록번호</th>
+							<td class="daintdth"  style="width: 35%;"></td>
 							<!-- 여기에 값 들어감 -->
 						</tr>
 						<tr>
-							<th>통신판매업신고</th>
-							<td style="width: 35%;"></td>
+							<th class="daintdth"  style="width: 15%;">통신판매업신고</th>
+							<td class="daintdth"  style="width: 35%;"></td>
 							<!-- 여기에 값 들어감 -->
-							<th>사업자 계좌번호</th>
-							<td style="width: 35%;">[]</td>
+							<th class="daintdth"  style="width: 15%;">사업자 계좌번호</th>
+							<td class="daintdth" style="width: 35%;">[]</td>
 							<!-- 여기에 값 들어감 -->
 						</tr>
 					</table>
 
 
 					<!-- 멤버십 관리 테이블 -->
-					<h5>멤버십 관리</h5>
-					<table>
+					<h5 style="font-weight: bold;">멤버십 관리</h5>
+					<table class="daintable">
 						<tr>
-							<th>멤버십 등급</th>
-							<td>일반 작가
-								<button class="btn" type="button">멤버십 신청</button>
+							<th class="daintdth"  style="width: 15%;">멤버십 등급</th>
+							<td class="daintdth"  style="width: 85%;">일반 작가
+								<button class="btn2" type="button">멤버십 신청</button>
 							</td>
 						</tr>
 					</table>
 					<br> <br />
+				
+				
 				</div>
+				<!-- 끝 subcontent -->
 
 
 				<!--모달 안에 뜨는 내용-->
 				<div class="modal fade" id="staticBackdrop" data-backdrop="static"
 					tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
 					aria-hidden="true">
-					<div class="modal-dialog" role="document" style="width:350px; margin-left: 30%; margin-top: 10%;">
+					<div class="modal-dialog" role="document" style="width:350px; margin-left: 35%; margin-top: 15%;">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="staticBackdropLabel">작가명 변경하기</h5>
+								<h5 class="modal-title" id="staticBackdropLabel" style="font-weight: bold;">작가명 변경하기</h5>
 								<!-- 닫기버튼 -->
 								<button type="button" class="close" data-dismiss="modal"
 									aria-label="Close">
@@ -193,7 +201,7 @@ h4, h5 {
 									<input type="text" maxlength="20" placeholder="변경할 작가명"
 										style="min-width: 200px; height: 30px; font-size: 12pt; margin-left: 3%">
 								</div>
-								<input type="submit" class="btn" value="변경" style="margin-left: 3%">
+								<input type="submit" value="변경" style="margin-left: 3%">
 							</div>
 							<div style="font-size: 13px; margin-top: auto; margin-bottom: 3%; margin-left: 3%; ">
 								* 작가명은 20자까지 가능합니다.</div>

@@ -35,7 +35,7 @@ $(function() {
 	margin-left: 2%;
 }
 
-.btn {
+.subcontent .btn2 {
 	background-color: #4169E1; /* blue */
 	border: none;
 	color: white;
@@ -48,28 +48,33 @@ $(function() {
 	font-size: 16px;
 }
 
-table {
+.daintable {
 	/*font-family: arial, sans-serif;*/
 	border-collapse: collapse;
-	width: 80%;
+	width: 90%;
 	margin-bottom: 50px;
 }
 
-td, th {
+.daintdth {
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 	text-align: left;
 	padding: 8px;
 }
 
-th {
+.subcontent th {
 	width: 15%;
 	background-color: #f2f2f2;
 }
 
-h4, h5 {
+.subcontent h4, h5 {
 	font-weight: bold;
 }
+
+footer span{
+	margin-right: 10%;
+}
+
 </style>
 
 
@@ -87,52 +92,52 @@ h4, h5 {
 				<!-- end Header/Nav -->
 
 				<div class="subcontent">
-					<h4>판매정책</h4>
+					<h4 style=" font-weight: bold;">판매정책</h4>
 					<hr>
 					<br />
 					<!-- 배송비 테이블 -->
-					<h5>배송비</h5>
+					<h5 style=" font-weight: bold;">배송비</h5>
 					<p>제주, 도서산간일 경우 기본료만 무료가 됩니다.</p>
 					<form action="#">
-					<table>
+					<table class="daintable">
 						<tr>
-							<th>결제방식</th>
-							<td><select name="deliveryChargeChoice">
+							<th class="daintdth" style="width: 15%;">결제방식</th>
+							<td class="daintdth" style="width: 85%;"><select name="deliveryChargeChoice">
 									<option value="선결제">선결제</option>
 									<option value="후결제">후결제</option>
 							</select></td>
 						</tr>
 						<tr>
-							<th>기본료</th>
-							<td><input size="13" type="text" placeholder="0" name="deliveryBasicCharge" style="text-align: right;"/>
+							<th class="daintdth" style="width: 15%;">기본료</th>
+							<td class="daintdth" style="width: 85%;"><input size="13" type="text" placeholder="0" name="deliveryBasicCharge" style="text-align: right;"/>
 								원</td>
 						</tr>
 						<tr>
-							<th>제주 / 도서산간 추가비용</th>
-							<td><input size="13" type="text" placeholder="0"
+							<th class="daintdth" style="width: 15%;">제주 / 도서산간 추가비용</th>
+							<td class="daintdth" style="width: 85%;"><input size="13" type="text" placeholder="0"
 								name="otherDeliveryBasicCharge" style="text-align: right;"/> 원</td>
 						</tr>
 						<tr>
-							<th>배송비 무료 조건</th>
-							<td><input size="13" type="text" placeholder="0"
+							<th class="daintdth" style="width: 15%;">배송비 무료 조건</th>
+							<td class="daintdth" style="width: 85%;"><input size="13" type="text" placeholder="0"
 								name="otherDeliveryBasicCharge" style="text-align: right;"/> 원 이상</td>
 						</tr>
 					</table>
 
 					<!-- 교환 / 환불 테이블 -->
-					<h5>제작 / 배송</h5>
-					<h5>교환 / 환불</h5>
-					<table>
+					<h5 style="font-weight: bold;">제작 / 배송</h5>
+					<h5 style="font-weight: bold;">교환 / 환불</h5>
+					<table class="daintable">
 						<tr>
-							<th>상태</th>
-							<td><select name="deliveryState">
+							<th class="daintdth" style="width: 15%;">상태</th>
+							<td class="daintdth" style="width: 85%;"><select name="deliveryState">
 									<option value="가능">가능</option>
 									<option value="불가능">불가능</option>
 							</select></td>
 						</tr>
 						<tr>
-							<th>상세 내용</th>
-							<td style="height:300px;"><textarea id="content" maxlength="300" 
+							<th class="daintdth" style="width: 15%;">상세 내용</th>
+							<td class="daintdth" style="height:300px; width: 85%;"><textarea id="content" maxlength="300" 
 							style="min-height: 200px; max-height:200px; min-width: 60%; max-width: 60%; max-width: scroll;">
 * 단순변심으로 인한 교환/환불은 7일 이내 가능합니다.
 * 이름이나 기타 추가사항이 들어간 맞춤제작의 경우와 착용 흔적이 있는 제품은 교환/환불이 어렵습니다.</textarea><br>
@@ -142,8 +147,8 @@ h4, h5 {
 					</table>
 					
 					<div class="spButton" style="margin-bottom: 50px;">
-						<div style="text-align: center; width: 80%;">
-							<button class="btn" type="submit">확인</button>
+						<div style="text-align: center; width: 90%;">
+							<button class="btn2" type="submit">확인</button>
 						</div>
 					</div>
 					</form>
