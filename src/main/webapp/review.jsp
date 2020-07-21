@@ -107,6 +107,30 @@ form {
 	width: 90%;
 	margin: 5% auto;
 }
+.textwrap {
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+.textwrap textarea {
+	height:auto;
+    width: 100%;
+    resize: none;
+    min-height: 4.5em;
+    line-height:1.6em;
+    max-height: 9em;
+}
+.textwrap span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+#counter {
+  background:rgba(255,0,0,0.5);
+  border-radius: 0.5em;
+  padding: 0 .5em 0 .5em;
+  font-size: 0.75em;
+}
 
 </style>
 </head>
@@ -130,19 +154,17 @@ form {
 					<!-- end of topLine -->
 					<hr>
 					<div class="middleLine">
-						<form class="search" action="#">
-							<input type="text" placeholder="작품명을 입력하세요" name="search">
-							<button class="button" type="submit">검색</button>
-						</form>
+						<!-- <form class="search" action="#"> -->
+							<input type="text" placeholder="작품명을 입력하세요" name="search" id="search">
+							<!-- <button class="button" type="submit">검색</button> -->
+						<!-- </form> -->
 
 						<div class="formAction">
-							<form action="#" class="show_number">
-								<select name="show" id="show_id">
-									<option value="showten">10개씩 보기</option>
-									<option value="showthirty">30개씩 보기</option>
-									<option value="showfifty">50개씩 보기</option>
-								</select>
-							</form>
+							<select name="rowPerPage" id="rowPerPage">
+								<option value="10">10개씩 보기</option>
+								<option value="30">30개씩 보기</option>
+								<option value="50">50개씩 보기</option>
+							</select>
 						</div>
 					</div>
 					
@@ -150,237 +172,42 @@ form {
 					<!-- 테이블 시작 -->
 					<div class="table">
 						<table id="reviewTable" style="width:100%;">
-							<tr>
-								<th style="width:10%;">작성일자</th>
-								<th style="width:20%;">작품명</th>
-								<th style="width:10%;">작성자</th>
-								<th style="width:10%;">별점</th>
-								<th style="width:15%;">사진</th>
-								<th style="width:35%;">내용</th>
-							</tr>
-							<tr><!-- 구매후기 DB 불러오기 -->
-								<td>2020-07-16</td>
-								<td>"셀럽 만들어 주는"인스타 케이크</td>
-								<td>홍길동</td>
-								<td>★★★★★</td>
-								<td>사진/사진/사진</td>
-								<td>와~! 로젠택배라서 걱정했는데 1도 망가짐도 없이 도착했네요! 율도국 직원들과 배부르게 맛있게 잘 먹었습니다! 가격값 제대로 하네요! 사이즈도 크고요! 모양도 이쁘구요!</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>2020-07-16</td>
-								<td>"쌍코피 빵터지는"소주병 케이크</td>
-								<td>참이슬</td>
-								<td>★☆☆☆☆</td>
-								<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
-									src="img/cake.jpg"/>
-								</td>
-								<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
-								<td>
-									<!-- 후기 내용 -->
-									<div type="button" data-toggle="modal" data-target="#staticBackdrop">
-									  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
-									</div>
-								</td>
-							</tr>
+							<thead>
+								<tr>
+									<th style="width:10%;">작성일자</th>
+									<th style="width:20%;">작품명</th>
+									<th style="width:10%;">작성자</th>
+									<th style="width:10%;">별점</th>
+									<th style="width:15%;">사진</th>
+									<th style="width:35%;">내용</th>
+								</tr>
+							</thead>
+							<tbody id="reviewBody" style="font-size:13px; vertical-align: middle;">
+								<!-- 구매후기 DB 불러오기 -->
+								<tr>
+									<td>2020-07-16</td>
+									<td>"쌍코피 빵터지는"소주병 케이크</td>
+									<td>참이슬</td>
+									<td>★☆☆☆☆</td>
+									<td><img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px"
+										src="img/cake.jpg"/>
+									</td>
+									<!-- 댓글 내용 눌렀을 때 모달 띄워주는 부분 -->
+									<td>
+										<!-- 후기 내용 -->
+										<div type="button" data-toggle="modal" data-target="#staticBackdrop">
+										  소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요?
+										</div>
+									</td>
+								</tr>
+							</tbody>
 						</table>
 					</div>
 					<!-- 테이블 끝 -->
 
 					<!-- 페이징 처리 -->
-					<div class="paging">
-						<a class="arrow prev" href="#">이전</a><a href="#">1</a><a class="arrow next" href="#">다음</a>
+					<div class="paging" id="pagination">
+						<!-- <a class="arrow prev" href="#">이전</a><a href="#">1</a><a class="arrow next" href="#">다음</a> -->
 					</div>
 				</div>
 				
@@ -397,11 +224,11 @@ form {
 														<span aria-hidden="true">&times;</span>
 													</button>
 												</div>
-												<div class="modal-body" style="height:300px">
+												<div class="modal-body" style="height:260px">
 													<div style="margin-left:15%; margin-right:15%;">
 														<div style="width:100%; height:50px; display:flex; flex-direction: row;">
 															<div style="width:50%; display:flex; flex-direction:column;">
-																<div style="font-size:13px;">참이슬</div>
+																<div style="font-size:13px; margin-bottom:1%;">참이슬</div>
 																<div style="font-size:13px;">2020-07-16</div>
 															</div>
 															<div style="float:right; width:50%">
@@ -430,11 +257,22 @@ form {
 														</div>
 													</div>
 												</div>
-												<div class="modal-footer">
+												<div class="modal-footer" style="display:flex; flex-direction:column;">
 													<!-- 글자수 채워지는거 기능 추가 해야 함 -->
-													<div><input type="text" maxlength="200" placeholder="댓글을 남겨주세요" style="width:320px;height:30px;font-size:12pt;"></div>
-													<input type="submit" class="btn btn-primary" value="댓글등록">
-													<label style="font-size:13px; margin-top:auto; margin-bottom:3%; margin-left: auto; margin-right: auto;">답글을 작성하면 작성자에게 푸시로 알려드립니다.</label>
+													<div style="display:flex; flex-direction:row; width:100%;">
+														<form style="display:flex; flex-direction:row; width:100%;">
+														<div class="textwrap" style="display:flex; width:85%;">
+															<textarea id="comment" placeholder="댓글을 남겨 주세요." maxlength="1000" style="width:100%; resize:none; font-size:13px"></textarea>
+																<span id="counter" style="display:flex; position:absolute;">###</span>
+														</div>
+														<div style="display:flex; width:10%; margin:2%">
+															<input type="submit" class="btn btn-primary" value="등록">
+														</div>
+														</form>
+													</div>
+													<div>
+														<label style="font-size:13px; margin-top:auto; margin-bottom:3%; margin-left: auto; margin-right: auto;">댓글을 작성하면 작성자에게 푸시로 알려드립니다.</label>
+													</div>
 												</div>
 											</div>
 											<!-- end for modal content -->
@@ -461,7 +299,125 @@ form {
 
 				<!-- Custom scripts for all pages-->
 				<script src="js/sb-admin-2.min.js"></script>
+				<script>
+					$(function() {
+						$('#comment').keyup(function(e) {
+						var comment = $(this).val();
+						$(this).height(((comment.split('\n').length + 1) * 1.5) + 'em');
+						$('#counter').html(comment.length + '/1000');
+						});
+						$('#comment').keyup();
+					});
+					
+					//테이블 데이터 넣어주기 
+					var vlist =[];
+					for (var i = 0; i<100; i++){
+						vlist.push({onetd:'2020-07-01',twotd:'삼장법사도 먹는 슈퍼 딸기 케이크\t'+i,threetd:'손오공',fourtd:'★★☆☆☆',fivetd:'<img style="overflow: hidden; align-items: center; justify-content: center; width: 75px; height: 75px" src="img/cake.jpg"/>',sixtd:'<div type="button" data-toggle="modal" data-target="#staticBackdrop"> 소주병을 시켰는데 쵸코케잌이 왔네요? 당장 환불해주세요. 초코 알레르기 있는 사람입니다. 기쁜 마음으로 받았다가 응급실 실려갈 뻔 했어요. 사람 잡는 케잌이네요. 그래서 쌍코피 빵 터지는 소주병 케잌인가요? </div>'});
+					}
+					
+					// 초기 테이블 보여줄 행 카운트값 설정
+					var pageCount = 10;
+					
+					//페이징 처리 함수..
+					var pagingFunc = function(){
+						pageCount = $("#rowPerPage").val();
+						var table = document.getElementById("reviewTable");
+	              		//var pageCount = document.getElementById("rowPerPage").value;
+		                var blockCount = 3;
+		                
+		                var totalPage = Math.ceil(vlist.length / pageCount); // 총 행수에서 목록 보기 선택한 값으로 몇개씩 볼지 ~
+		                var totalBlock = Math.ceil(totalPage / blockCount); // 페이지
+		                
+		                var pagination = document.getElementById('pagination');
+		                var commentsTable = document.getElementById('reviewTable').querySelector('tbody');
+		                
+		                var renderTableAndPagination = function(page = 1){
+		                   renderTable(page);
+		                   renderPagination(page);
+		                };
+		                
+		                var renderTable = function(page){
+		                   var startNum = (pageCount * (page - 1));
+		                   var endNum = ((pageCount * page) >= vlist.length) ? vlist.length : (pageCount * page);
+		                   
+		                   var html = '';
+		                   
+		                   for(var index = startNum; index < endNum; index++){
+		                	   html += '<tr><td>' + vlist[index].onetd + '</td><td name>' + vlist[index].twotd 
+		                	   + '</td><td>' + vlist[index].threetd + '</td><td>' + vlist[index].fourtd 
+		                	   + '</td><td>' + vlist[index].fivetd + '</td><td>' + vlist[index].sixtd 
+		                	   + '</td></tr>';
+		                   }
+		                   commentsTable.innerHTML = html;
+		                };
 
+		                var renderPagination = function(page){
+		                   var block = Math.floor((page-1)/blockCount)+1;
+		                   var startPage = ((block-1)*blockCount)+1;
+		                   var endPage = ((startPage + blockCount - 1) > totalPage) ? totalPage : (startPage + blockCount - 1);
+		                  
+		                   var paginationHTML = '';
+		                  
+		                   if(page !== 1) paginationHTML += "<a style='cursor:pointer' class='first_page'>처음</a>";
+		                   if(block !== 1) paginationHTML += "<a style='cursor:pointer' class='back_page'>이전</a>";
+		                  
+		                   for(var index = startPage; index <= endPage; index++){
+		                      paginationHTML += (parseInt(page) === parseInt(index)) ? "| <a style='color:#ff8400'>" + index + "</a> |" :"| <a style='cursor:pointer' class='go_page' data-value='" + index + "'>" + index + "</a> |";
+		                   }
+		                  
+		                   if(block < totalBlock) paginationHTML += "<a style='cursor:pointer' class='next_page'>다음</a>";
+		                   if(page < totalPage) paginationHTML += "<a style='cursor:pointer' class='last_page'>끝</a>";
+		               
+		                   pagination.innerHTML = paginationHTML;
+		                   addEventPagination(startPage, endPage);
+		                };
+		               
+		                var addEventPagination = function(startPage, endPage){
+		                  if(!!document.querySelector(".first_page")){
+		                     document.querySelector(".first_page").addEventListener('click', ()=>{
+		                        renderTableAndPagination(1);
+		                     });
+		                  }
+		                  if(!!document.querySelector(".back_page")){
+		                     document.querySelector(".back_page").addEventListener('click', ()=>{
+		                        renderTableAndPagination(startPage-1);
+		                     });
+		                  }
+		                  document.querySelectorAll(".go_page").forEach(goPage => {
+		                     goPage.addEventListener('click', e => {
+		                        renderTableAndPagination(parseInt(e.target.getAttribute('data-value')));
+		                     });
+		                  });
+		                  if(!!document.querySelector(".next_page")){
+		                     document.querySelector(".next_page").addEventListener('click', ()=>{
+		                        renderTableAndPagination(endPage+1);
+		                     });
+		                  }
+		                  if(!!document.querySelector(".last_page")){
+		                     document.querySelector(".last_page").addEventListener('click', ()=>{
+		                        renderTableAndPagination(totalPage);
+		                     });
+		                  }
+		               };
+		               renderTableAndPagination();
+					}
+					
+					//페이지 세팅을 위한 페이징 처리 함수 호출
+					$(document).ready(function(){
+						pagingFunc();
+						$("#rowPerPage").change(function(){
+							pagingFunc();
+						});
+			            $("#search").keyup(function() {
+			                var k = $(this).val();
+			                $("#reviewtable > tbody > tr").hide();
+			                var temp = $("#reviewtable > tbody > tr > td:nth-child(5n+2):contains('" + k + "')");
+
+			                $(temp).parent().show();
+			            })
+					});
+					
+				</script>
 			</div>
 			<!-- end of content -->
 		</div>

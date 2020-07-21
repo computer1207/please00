@@ -129,7 +129,7 @@ form {
 							<div style="width:35%; float:left; margin-left:5%;">
 								<a onClick="window.location.reload()" style="cursor: pointer;"><div class="button">새로고침</div></a>
 							</div>
-							<div style="width:50%; float:right; margin-left:5%;">
+							<div style="float:right; margin-left:5%;">
 								<button type="button" class="button dropdown-toggle" data-toggle="dropdown">
 										<i class="fa fa-cog fa-fw"></i>
 										앱 알림 설정
@@ -154,7 +154,7 @@ form {
 														<input type="submit" class="button save" value="확인">
       												</li>
 											</ul>
-										</form>
+									</form>
 							</div>
 						</div>
 					</div>
@@ -177,21 +177,25 @@ form {
 					<!-- 테이블 시작 -->
 					<div class="table">
 						<table id="alarmTable" style="width:100%;">
-							<tr>
-								<th style="width:15%;">발신자</th>
-								<th style="width:15%;">일자</th>
-								<th style="width:70%;">내용</th>
-							</tr>
-							<tr>
-								<td>아이디어스</td>
-								<td>2019년 4월 25일</td>
-								<td>작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다</td>								
-							</tr>
-							<tr>
-								<td>아이디어스</td>
-								<td>2019년 4월 25일</td>
-								<td>작가님 추천 광고 입찰이 시작되었습니다</td>								
-							</tr>
+							<thead>
+								<tr>
+									<th style="width:15%;">발신자</th>
+									<th style="width:15%;">일자</th>
+									<th style="width:70%;">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>아이디어스</td>
+									<td>2019년 4월 25일</td>
+									<td><a href="#">작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다작가님 추천 광고 입찰이 시작되었습니다</a></td>								
+								</tr>
+								<tr>
+									<td>아이디어스</td>
+									<td>2019년 4월 25일</td>
+									<td><a href="#">작가님 추천 광고 입찰이 시작되었습니다</a></td>								
+								</tr>
+							</tbody>
 						</table>
 					</div>
 					<!-- 테이블 끝 -->
