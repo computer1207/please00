@@ -13,14 +13,17 @@
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet">
 <style>
+.workRegisterContainer{
+	width:80%;
+}
 .basicInformationContainer {
-	width: 80%;
+	width: 100%;
 	margin-left: 2%;
 }
 
 .provideInformationContainer, .targetContainer, .optionContainer,
 	.savecontainer {
-	width: 80%;
+	width: 100%;
 	margin-left: 2%;
 	margin-top: 3%;
 }
@@ -29,7 +32,7 @@
 	float: right;
 }
 
-table {
+.basicInfoTable, .provideInfoTable, .targetTable, .optionTable {
 	margin-top: 1%;
 	width: 100%;
 	table-layout: fixed;
@@ -43,7 +46,7 @@ td{
 	padding:10px;
 }
 
-h5 {
+h4 {
 	margin: 0px;
 }
 
@@ -88,7 +91,10 @@ h5 {
 	display: flex;
 	justify-content: center;
 	align-item: center;
-	margin:2%;
+	margin-left:0;
+	margin-top:2%;
+	margin-bottom:2%;
+	margin-right:0;
 }
 
 #imgs{
@@ -107,7 +113,6 @@ function setThumbnail(event) {
 	for (var image of event.target.files) { 
 		var reader = new FileReader(); 
 		reader.onload = function(event) { 
-			var i = 1;
 			var img = document.createElement("img"); 
 			img.setAttribute("src", event.target.result); 
 			var divEle = document.createElement("a");
@@ -131,12 +136,13 @@ function setThumbnail(event) {
 			<div id="content">
 				<jsp:include page="include/head.jsp" />
 				<!-- end Header/Nav -->
+				<div class="workRegisterContainer">
 				<!-- 기본정보 영역 -->
 				<div class="basicInformationContainer">
 					<!-- topLine -->
 					<div class="flexcontainer">
 						<div class="textTitle">
-							<h5>기본정보</h5>
+							<h4>기본정보</h4>
 							등록하려는 작품에 대해 이야기해주세요
 						</div>
 						<div class="loadButton">
@@ -159,23 +165,23 @@ function setThumbnail(event) {
 						<tr>
 							<td class="left">작품명</td>
 							<td><div class="workNameRegister">
-									<input type="text" id="workName" maxlength="20"> <span
-										id="nameCounter">0/20</span>
+									<input type="text" id="workName" maxlength="20" autocomplete="off"> <span
+										id="nameCounter"> 0/20</span>
 								</div></td>
 						</tr>
 						<tr>
 							<td class="left">가격</td>
-							<td><input type="text" id="workPrice">원</td>
+							<td><input type="text" id="workPrice" autocomplete="off"> 원</td>
 						</tr>
 						<tr>
 							<td class="left">할인</td>
-							<td><input type="checkbox"> 할인 후 가격 <input
-								type="text" id="salePrice">원</td>
+							<td><input type="checkbox"> 할인 후 가격  <input
+								type="text" id="salePrice" autocomplete="off"> 원</td>
 						</tr>
 						<tr>
 							<td class="left">수량</td>
-							<td><input type="checkbox">주문시 제작 <input type="text"
-								id="num">개</td>
+							<td><input type="checkbox"> 주문시 제작  <input type="text"
+								id="num"> 개</td>
 						</tr>
 						<tr>
 							<td class="left">작품설명</td>
@@ -213,7 +219,7 @@ function setThumbnail(event) {
 					<!-- topLine -->
 					<div class="topLine">
 						<div class="textTitle">
-							<h5>작품 정보 제공 고시</h5>
+							<h4>작품 정보 제공 고시</h4>
 							<p>전자상거래법에 따라 작품 정보제공 고시는 필수 입력사항입니다. 해당 정보에 대한 책임은 판매 작가님에게
 								있습니다.</p>
 						</div>
@@ -245,37 +251,37 @@ function setThumbnail(event) {
 								<div class="infoBox" style="border: 1px solid #ddd; padding:15px; margin-top:2%; width:85%">
 									<div id="weight" >
 										<label>포장단위별 용량(중량), 수량</label><br> <input type="text"
-											id=wWeight size="100">
+											id=wWeight size="78%" autocomplete="off">
 									</div>
 									<!-- end weight -->
 									<div id="produce" style="margin-top:1%">
 										<label>생산자 및 소재지</label><br> <input type="text"
-											id=wProduce size="100">
+											id=wProduce size="78%" autocomplete="off">
 									</div>
 									<!-- end produce -->
 									<div id="ingredient" style="margin-top:1%">
 										<label>원재료명 및 함량</label><br> <input type="text"
-											id=wIngredient size="100">
+											id=wIngredient size="78%" autocomplete="off">
 									</div>
 									<!-- end ingredient -->
 									<div id="date" style="margin-top:1%">
 										<label>제조년월일, 유통기한 또는 품질 유지기한</label><br> <input
-											type="text" id=wDate size="100">
+											type="text" id=wDate size="78%" autocomplete="off">
 									</div>
 									<!-- end date -->
 									<div id="manage" style="margin-top:1%">
 										<label>관리법상 표시사항</label><br> <input type="text"
-											id=wManage size="100">
+											id=wManage size="78%" autocomplete="off">
 									</div>
 									<!-- end manage -->
 									<div id="config" style="margin-top:1%">
 										<label>구성</label><br> <input type="text" id=wConfig
-											size="100">
+											size="78%" autocomplete="off">
 									</div>
 									<!-- end config -->
 									<div id="manual" style="margin-top:1%">
 										<label>보관방법 또는 취급방법</label><br> <input type="text"
-											id=wManual size="100">
+											id=wManual size="78%" autocomplete="off">
 									</div>
 									<!-- end manual -->
 
@@ -292,7 +298,7 @@ function setThumbnail(event) {
 				<div class="targetContainer">
 					<!-- topLine -->
 					<div class="topLine">
-						<h5>타겟설정</h5>
+						<h4>타겟설정</h4>
 					</div>
 					<!-- end of topLine -->
 					<table border="1" class="targetTable">
@@ -301,13 +307,13 @@ function setThumbnail(event) {
 							<td>
 								<div id="add">
 									<form action="#" class="keywordSearch">
-										<input type="text" id="keyword">
+										<input type="text" id="keyword" autocomplete="off">
 										<button type="submit">추가</button>
-										0/20
+										 0/20
 									</form>
 								</div>
 								<div class="keywordContainer"></div>
-								10/10개<br>
+								 10/10개<br>
 								띄어쓰기, 문장 기호가 특수 문자를 사용한 등록이 불가능하며, 최대 10개까지 등록이 가능합니다.
 							</td>
 						</tr>
@@ -321,7 +327,7 @@ function setThumbnail(event) {
 
 					<div class="flexcontainer">
 						<div class="textTitle">
-							<h5>옵션</h5>
+							<h4>옵션</h4>
 						</div>
 						<div class="addButton">
 							<button class="button" id="add" type="button">옵션추가</button>
@@ -336,7 +342,7 @@ function setThumbnail(event) {
 								<div>
 									<div class="flexcontainer">
 										<div class="textTitle">
-											<input type="text" id="keyword" placeholder="구성 선택">
+											<input type="text" id="keyword" placeholder="구성 선택" autocomplete="off">
 										</div>
 										<div class="addButton">
 											<button type="button" class="button">세부 항목 추가</button>
@@ -349,26 +355,26 @@ function setThumbnail(event) {
 								<hr>
 								<div>
 									<div class="flexCon">
-										<div class="nameGroup" style="margin-left:2%">
+										<div class="nameGroup" style="margin-left:3%">
 											<div class="names">
-												<label>이름</label> &nbsp;<input type="text" id="name1" size="50">
+												<label>이름</label> &nbsp;<input type="text" id="name1" size="30%" autocomplete="off">
 											</div>
 											<div class="names">
-												<label>이름</label> &nbsp;<input type="text" id="name2" size="50px">
+												<label>이름</label> &nbsp;<input type="text" id="name2" size="30%" autocomplete="off">
 											</div>
 											<div class="names">
-												<label>이름</label> &nbsp;<input type="text" id="name3" size="50px">
+												<label>이름</label> &nbsp;<input type="text" id="name3" size="30%" autocomplete="off">
 											</div>
 										</div>
-										<div class="priceGroup" style="margin-left:5%">
+										<div class="priceGroup" style="margin-left:9%">
 											<div class="prices">
-												<label>가격</label> &nbsp;<input type="text" id="price1" size="50px">
+												<label>가격</label> &nbsp;<input type="text" id="price1" size="30%" autocomplete="off">
 											</div>
 											<div class="prices">
-												<label>가격</label> &nbsp;<input type="text" id="price2" size="50px">
+												<label>가격</label> &nbsp;<input type="text" id="price2" size="30%" autocomplete="off">
 											</div>
 											<div class="prices">
-												<label>가격</label> &nbsp;<input type="text" id="price3" size="50px">
+												<label>가격</label> &nbsp;<input type="text" id="price3" size="30%" autocomplete="off">
 											</div>
 										</div>
 									</div>
@@ -382,7 +388,7 @@ function setThumbnail(event) {
 								<div>
 									<div class="flexcontainer">
 										<div class="textTitle">
-											<input type="text" id="keyword" placeholder="구성 선택">
+											<input type="text" id="keyword" placeholder="구성 선택" autocomplete="off">
 										</div>
 										<div class="addButton">
 											<button type="button" class="button">세부 항목 추가</button>
@@ -395,26 +401,26 @@ function setThumbnail(event) {
 								<hr>
 								<div>
 									<div class="flexCon">
-										<div class="nameGroup" style="margin-left:2%">
+										<div class="nameGroup" style="margin-left:3%">
 											<div class="names">
-												<label>이름</label> &nbsp;<input type="text" id="name1" size="50">
+												<label>이름</label> &nbsp;<input type="text" id="name1" size="30%" autocomplete="off">
 											</div>
 											<div class="names">
-												<label>이름</label> &nbsp;<input type="text" id="name2" size="50px">
+												<label>이름</label> &nbsp;<input type="text" id="name2" size="30%" autocomplete="off">
 											</div>
 											<div class="names">
-												<label>이름</label> &nbsp;<input type="text" id="name3" size="50px">
+												<label>이름</label> &nbsp;<input type="text" id="name3" size="30%" autocomplete="off">
 											</div>
 										</div>
-										<div class="priceGroup" style="margin-left:5%">
+										<div class="priceGroup" style="margin-left:9%">
 											<div class="prices">
-												<label>가격</label> &nbsp;<input type="text" id="price1" size="50px">
+												<label>가격</label> &nbsp;<input type="text" id="price1" size="30%" autocomplete="off">
 											</div>
 											<div class="prices">
-												<label>가격</label> &nbsp;<input type="text" id="price2" size="50px">
+												<label>가격</label> &nbsp;<input type="text" id="price2" size="30%" autocomplete="off">
 											</div>
 											<div class="prices">
-												<label>가격</label> &nbsp;<input type="text" id="price3" size="50px">
+												<label>가격</label> &nbsp;<input type="text" id="price3" size="30%" autocomplete="off">
 											</div>
 										</div>
 									</div>
@@ -425,6 +431,7 @@ function setThumbnail(event) {
 					</table>
 				</div>
 				<!-- end 옵션 영역 -->
+				</div><!-- end workRegisterContainer -->
 				<div class="savecontainer">
 					<button type="submit" id="save">저장하기</button>
 				</div>
@@ -454,7 +461,7 @@ function setThumbnail(event) {
 				<!-- Page level custom scripts -->
 				<script src="js/demo/chart-area-demo.js"></script>
 				<script src="js/demo/chart-pie-demo.js"></script>
-			</div>
+			</div><!-- end content -->
 		</div>
 	</div>
 </body>
