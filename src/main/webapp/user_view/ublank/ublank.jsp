@@ -8,17 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="../include/uHeader.jsp" />
-	
-	
-	<div style="min-height: 500px">
-	
-	</div>
+<div>
+	<%@ include file="/user_view/include/uHeader.jsp"  %>
+	<%@ include file="/user_view/include/uside.jsp" %>
 	
 	
 	
-	
-	
-	<jsp:include page="../include/uFooter.jsp"/>
+	<%@ include file="/user_view/include/uFooter.jsp" %>
+</div>
 </body>
 </html>
