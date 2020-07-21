@@ -55,7 +55,7 @@
 												src="ddd.jpg" /></td>
 											<td>
 												<div style="text-align: left">
-													<a href="#" style="color: black; font-weight:bold; font-size:100%"><input
+													<a href="orderList.jsp" style="color: black; font-weight:bold; font-size:100%"><input
 														type="checkbox" checked="checked" />[입점할인] 스터드키링_TEST</a> <br>0개남음<br>
 													<label
 														style="text-align: center; background-color: #5EC75E; width: auto; margin-bottom: 0rem; color: white; font-size:100%">
