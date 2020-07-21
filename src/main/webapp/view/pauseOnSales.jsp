@@ -41,12 +41,12 @@
 	float: center;
 }
 
-.table {
+.ttable {
 	margin-top:10px;
 	text-align:center;
 }
 
-table{
+#pausetable{
 	width:100%;
 	table-layout:fixed;
 	border-top: 1px solid #ddd;
@@ -92,6 +92,9 @@ form {
 	border:0px;
 }
 
+.bottomLine{
+	margin:1%;
+}
 </style>
 
 </head>
@@ -146,7 +149,7 @@ form {
 	</div>	<!-- middleLine -->
 	
 	<!-- 테이블 시작 -->
-	<div class="table">
+	<div class="ttable">
 		<table border="1" id="pausetable">
 			<tr>
 				<th style="width:4%"><input type="checkbox"></th>
@@ -328,14 +331,14 @@ form {
 	<button class="button" id="deleteWork" type="button">작품 삭제</button>
 	</div>
 	<!-- 아래 버튼 끝 -->
-	
+    </div><!-- end of Container -->	
 	<!-- 페이징 처리 -->
 	 <div class="paging">
 	   <a class="arrow prev" href="#">이전</a>
         <a href="#">1</a>
        <a class="arrow next" href="#">다음</a>
     </div>
-    </div><!-- end of Container -->
+
             <jsp:include page="include/footer.jsp" />
             <!-- end footer -->
         
